@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Avaliações</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    h1, h2 {
+      margin: 10px 0;
+    }
+
+    main {
+      margin: 20px;
+    }
+
+    section {
+      margin-bottom: 20px;
+      padding: 16px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    textarea,
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="submit"],
+    button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px 0;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover,
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      background: #f9f9f9;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Avaliações</h1>
+     <h2>Links Rápidos</h2>
+  </header>
+  <button><li><a href="file:///C:/Users/Antonio/OneDrive/%C3%81rea%20de%20Trabalho/PAGINA%20WEB%20IMOBILIARIA/login/P%C3%A1gina%20Inicial%20(Home)/index....html">Página Inicial</a></button>
+    <button><li><a href="file:///C:/Users/Antonio/OneDrive/%C3%81rea%20de%20Trabalho/PAGINA%20WEB%20IMOBILIARIA/login/P%C3%A1gina%20Inicial%20(Home)/P%C3%A1gina%20de%20Pesquisa%20de%20Im%C3%B3veis/index.html">Pesquisar Imóveis</a></button>
+    <button><li><a href="file:///C:/Users/Antonio/OneDrive/%C3%81rea%20de%20Trabalho/PAGINA%20WEB%20IMOBILIARIA/login/P%C3%A1gina%20Inicial%20(Home)/P%C3%A1gina%20de%20Pesquisa%20de%20Im%C3%B3veis/P%C3%A1gina%20de%20Detalhes%20do%20Im%C3%B3vel/index.html">Detalhes do Imóvel</a></button>
+  
+    <button><li><a href="file:///C:/Users/Antonio/OneDrive/%C3%81rea%20de%20Trabalho/PAGINA%20WEB%20IMOBILIARIA/login/P%C3%A1gina%20Inicial%20(Home)/P%C3%A1gina%20de%20Pesquisa%20de%20Im%C3%B3veis/P%C3%A1gina%20de%20Detalhes%20do%20Im%C3%B3vel/P%C3%A1gina%20do%20Propriet%C3%A1rio/P%C3%A1gina%20do%20Locat%C3%A1rio/index...html">Página do Locatário</a></button>
+    <button><li><a href="file:///C:/Users/Antonio/OneDrive/%C3%81rea%20de%20Trabalho/PAGINA%20WEB%20IMOBILIARIA/login/P%C3%A1gina%20Inicial%20(Home)/P%C3%A1gina%20de%20Pesquisa%20de%20Im%C3%B3veis/P%C3%A1gina%20de%20Detalhes%20do%20Im%C3%B3vel/P%C3%A1gina%20do%20Propriet%C3%A1rio/P%C3%A1gina%20do%20Locat%C3%A1rio/P%C3%A1gina%20de%20Servi%C3%A7os%20de%20Pagamento/index.html">Serviços de Pagamento</a></button>
+
+    <button><li><a href="file:///C:/Users/Antonio/OneDrive/%C3%81rea%20de%20Trabalho/PAGINA~1/login/PGINAI~1/PGINAD~1/PGINAD~1/PGINAD~1/PGINAD~1/PGINAD~1/PGINAD~1/PGINAD~1/INDEX~1.HTM">Marketing Digital</a></button>
+
+
+  <body>
+    <main>
+        <!-- Seção do formulário de avaliação -->
+       <section>
+    <h2>Publicar Avaliação</h2>
+    <p>Escreva seu comentário e compartilhe sua opinião:</p>
+    <form id="formAvaliacao" onsubmit="event.preventDefault(); adicionarComentario();">
+      <label for="comentario">Comentário:</label>
+      <textarea id="comentario" placeholder="Escreva sua avaliação aqui" required></textarea>
+      <button type="submit">Enviar Comentário</button>
+    </form>
+  </section>
+
+  <section id="mensagem"></section>
+
+  <section>
+    <h2>Comentários</h2>
+    <p>Aqui estão as avaliações feitas por outros usuários:</p>
+    <ul id="listaComentarios"></ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Imobiliária Exemplo. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    function adicionarComentario() {
+      const comentarioInput = document.getElementById("comentario");
+      const comentario = comentarioInput.value.trim();
+      const mensagemDiv = document.getElementById("mensagem");
+      const listaComentarios = document.getElementById("listaComentarios");
+
+      if (!comentario) {
+        mensagemDiv.style.color = "red";
+        mensagemDiv.textContent = "Por favor, escreva um comentário antes de enviar.";
+        return;
+      }
+
+      const data = new Date().toLocaleString();
+      const novoComentario = { comentario, data };
+
+      const comentarios = JSON.parse(localStorage.getItem("comentarios") || "[]");
+      comentarios.push(novoComentario);
+      localStorage.setItem("comentarios", JSON.stringify(comentarios));
+
+      adicionarComentarioNaLista(novoComentario);
+      comentarioInput.value = "";
+      mensagemDiv.style.color = "green";
+      mensagemDiv.textContent = "Comentário publicado com sucesso!";
+    }
+
+    function adicionarComentarioNaLista({ comentario, data }) {
+      const li = document.createElement("li");
+      li.textContent = `${data} - ${comentario}`;
+      document.getElementById("listaComentarios").appendChild(li);
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const comentarios = JSON.parse(localStorage.getItem("comentarios") || "[]");
+      comentarios.forEach(adicionarComentarioNaLista);
+    });
+  </script>
+
+</body>
+</html>
+<a href="file:///C:/Users/Antonio/OneDrive/%C3%81rea%20de%20Trabalho/PAGINA%20WEB%20IMOBILIARIA/login/index..html" class="sair-link">Sair</a>

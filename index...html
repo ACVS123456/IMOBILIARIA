@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Locatário</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: #ff0000;
+            color: white;
+            padding: 20px 15px;
+            text-align: center;
+        }
+        
+        header h1 {
+            margin-bottom: 10px;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        nav ul li {
+            margin: 0 10px;
+        }
+        
+        nav ul li a {
+            color: rgb(7, 1, 1);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            background-color: #010801;
+        }
+        
+        main {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+        
+        section {
+            background-color: white;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        }
+        
+        section h2 {
+            margin-bottom: 10px;
+            color: #010508;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        ul li {
+            background-color: #fcfdfd;
+            margin-bottom: 8px;
+            padding: 8px 12px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.9rem;
+        }
+        
+        ul li button {
+            margin-left: 8px;
+            background-color: #007bff;
+            color: rgb(8, 1, 1);
+            border: none;
+            padding: 6px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        ul li button:hover {
+            background-color: #007bff;
+        }
+        
+        form#form-avaliacao {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        form label {
+            font-weight: bold;
+            color: #030508;
+        }
+        
+        form input[type="text"],
+        form textarea {
+            padding: 8px;
+            border: 1px solid #000407;
+            border-radius: 4px;
+            font-size: 1rem;
+            resize: vertical;
+        }
+        
+        form textarea {
+            min-height: 80px;
+        }
+        
+        form button[type="submit"] {
+            width: 150px;
+            align-self: flex-start;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        
+        form button[type="submit"]:hover {
+            background-color: #010408;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Área do Locatário</h1>
+         <h2>Links Rápidos</h2>
+        <nav>
+            <ul>
+              
+              <button><li><a href="file:///C:/Users/Antonio/OneDrive/%C3%81rea%20de%20Trabalho/PAGINA%20WEB%20IMOBILIARIA/login/P%C3%A1gina%20Inicial%20(Home)/index....html">Página Inicial</a></li>
+                <button><li><a href="file:///C:/Users/Antonio/OneDrive/%C3%81rea%20de%20Trabalho/PAGINA%20WEB%20IMOBILIARIA/login/P%C3%A1gina%20Inicial%20(Home)/P%C3%A1gina%20de%20Pesquisa%20de%20Im%C3%B3veis/index.html">Pesquisar Imóveis</a></li>
+                  <button><li><a href="file:///C:/Users/Antonio/OneDrive/%C3%81rea%20de%20Trabalho/PAGINA%20WEB%20IMOBILIARIA/login/P%C3%A1gina%20Inicial%20(Home)/P%C3%A1gina%20de%20Pesquisa%20de%20Im%C3%B3veis/P%C3%A1gina%20de%20Detalhes%20do%20Im%C3%B3vel/index.html">Detalhes do Imóvel</a></li>
+                    <button><li><a href="file:///C:/Users/Antonio/OneDrive/%C3%81rea%20de%20Trabalho/PAGINA%20WEB%20IMOBILIARIA/login/index.html">Página de cadastro de novos Clientes</a></li>
+                      
+                        <button><li><a href="file:///C:/Users/Antonio/OneDrive/%C3%81rea%20de%20Trabalho/PAGINA%20WEB%20IMOBILIARIA/login/P%C3%A1gina%20Inicial%20(Home)/P%C3%A1gina%20de%20Pesquisa%20de%20Im%C3%B3veis/P%C3%A1gina%20de%20Detalhes%20do%20Im%C3%B3vel/P%C3%A1gina%20do%20Propriet%C3%A1rio/P%C3%A1gina%20do%20Locat%C3%A1rio/P%C3%A1gina%20de%20Servi%C3%A7os%20de%20Pagamento/P%C3%A1gina%20de%20Avalia%C3%A7%C3%B5es/index.html">Página de Avaliação</a></li>
+                          
+               
+                 
+                 
+                  <button><li><a href="file:///C:/Users/Antonio/OneDrive/%C3%81rea%20de%20Trabalho/PAGINA%20WEB%20IMOBILIARIA/login/P%C3%A1gina%20Inicial%20(Home)/P%C3%A1gina%20de%20Pesquisa%20de%20Im%C3%B3veis/P%C3%A1gina%20de%20Detalhes%20do%20Im%C3%B3vel/P%C3%A1gina%20do%20Propriet%C3%A1rio/P%C3%A1gina%20do%20Locat%C3%A1rio/P%C3%A1gina%20de%20Servi%C3%A7os%20de%20Pagamento/index.html">Pagina do Serviços de Pagamento</a></li>
+                 
+                  <button><li><a href="file:///C:/Users/Antonio/OneDrive/%C3%81rea%20de%20Trabalho/PAGINA~1/login/PGINAI~1/PGINAD~1/PGINAD~1/PGINAD~1/PGINAD~1/PGINAD~1/PGINAD~1/PGINAD~1/INDEX~1.HTM">Pagina de Marketing Digital</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Área do Cliente - Interações</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+header, footer {
+  background-color: #030507;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+main {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+section {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+h2 {
+  margin-top: 0;
+  color: #007BFF;
+}
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+li {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+label {
+  display: block;
+  margin-top: 10px;
+}
+textarea, input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #218838;
+}
+.excluir-btn {
+  background-color: #dc3545;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+.excluir-btn:hover {
+  background-color: #c82333;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>Área do Cliente</h1>
+<p>Acompanhe seus imóveis favoritos, pesquisas e avaliações</p>
+</header>
+
+<main>
+<section id="historico">
+<h2>Histórico de Acessos</h2>
+<button><a href="file:///C:/Users/Antonio/OneDrive/%C3%81rea%20de%20Trabalho/PAGINA%20WEB%20IMOBILIARIA/login/P%C3%A1gina%20Inicial%20(Home)/P%C3%A1gina%20de%20Pesquisa%20de%20Im%C3%B3veis/P%C3%A1gina%20de%20Detalhes%20do%20Im%C3%B3vel/P%C3%A1gina%20do%20Propriet%C3%A1rio/P%C3%A1gina%20do%20Locat%C3%A1rio/index..html">Apartamento</a></button>
+<button><a href="file:///C:/Users/Antonio/OneDrive/%C3%81rea%20de%20Trabalho/PAGINA%20WEB%20IMOBILIARIA/login/P%C3%A1gina%20Inicial%20(Home)/P%C3%A1gina%20de%20Pesquisa%20de%20Im%C3%B3veis/P%C3%A1gina%20de%20Detalhes%20do%20Im%C3%B3vel/P%C3%A1gina%20do%20Propriet%C3%A1rio/P%C3%A1gina%20do%20Locat%C3%A1rio/index.html">Casa</a></button>
+</section>
+
+<section id="avaliacoes">
+  <h2>Avaliações de Imóveis</h2>
+  <form id="form-avaliacao">
+    <input type="hidden" id="indice-edicao" value="">
+    <label for="imovel">Imóvel:</label>
+    <input type="text" id="imovel" name="imovel" required>
+    <label for="comentario">Comentário:</label>
+    <textarea id="comentario" name="comentario" required></textarea>
+    <button type="submit" id="btn-submit">Enviar Avaliação</button>
+    <button type="button" id="btn-cancelar" style="display:none; margin-left: 10px;">Cancelar</button>
+  </form>
+  <ul id="lista-avaliacoes"></ul>
+</section>
+
+<script>
+  const form = document.getElementById("form-avaliacao");
+  const lista = document.getElementById("lista-avaliacoes");
+  const btnSubmit = document.getElementById("btn-submit");
+  const btnCancelar = document.getElementById("btn-cancelar");
+  const indiceEdicaoInput = document.getElementById("indice-edicao");
+
+  function renderAvaliacoes() {
+    const avaliacoes = JSON.parse(localStorage.getItem("avaliacoes_cliente") || "[]");
+    lista.innerHTML = "";
+
+    avaliacoes.forEach(({ imovel, comentario }, index) => {
+      const li = document.createElement("li");
+      li.style.marginBottom = "12px";
+
+      const texto = document.createElement("span");
+      texto.innerHTML = `<strong>${imovel}:</strong> ${comentario}`;
+      li.appendChild(texto);
+
+      // Botão editar verde
+      const btnEditar = document.createElement("button");
+      btnEditar.textContent = "Editar";
+      btnEditar.style.backgroundColor = "#28a745";
+      btnEditar.style.color = "white";
+      btnEditar.style.border = "none";
+      btnEditar.style.padding = "4px 10px";
+      btnEditar.style.marginLeft = "15px";
+      btnEditar.style.cursor = "pointer";
+      btnEditar.style.borderRadius = "4px";
+      btnEditar.onclick = () => iniciarEdicao(index);
+      li.appendChild(btnEditar);
+
+      // Botão excluir vermelho
+      const btnExcluir = document.createElement("button");
+      btnExcluir.textContent = "Excluir";
+      btnExcluir.style.backgroundColor = "#dc3545";
+      btnExcluir.style.color = "white";
+      btnExcluir.style.border = "none";
+      btnExcluir.style.padding = "4px 10px";
+      btnExcluir.style.marginLeft = "8px";
+      btnExcluir.style.cursor = "pointer";
+      btnExcluir.style.borderRadius = "4px";
+      btnExcluir.onclick = () => {
+        avaliacoes.splice(index, 1);
+        localStorage.setItem("avaliacoes_cliente", JSON.stringify(avaliacoes));
+        cancelarEdicao();
+        renderAvaliacoes();
+      };
+      li.appendChild(btnExcluir);
+
+      lista.appendChild(li);
+    });
+  }
+
+  function iniciarEdicao(index) {
+    const avaliacoes = JSON.parse(localStorage.getItem("avaliacoes_cliente") || "[]");
+    const { imovel, comentario } = avaliacoes[index];
+    document.getElementById("imovel").value = imovel;
+    document.getElementById("comentario").value = comentario;
+    indiceEdicaoInput.value = index;
+    btnSubmit.textContent = "Salvar";
+    btnCancelar.style.display = "inline-block";
+  }
+
+  function cancelarEdicao() {
+    form.reset();
+    indiceEdicaoInput.value = "";
+    btnSubmit.textContent = "Enviar Avaliação";
+    btnCancelar.style.display = "none";
+  }
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const imovel = document.getElementById("imovel").value.trim();
+    const comentario = document.getElementById("comentario").value.trim();
+
+    if (!imovel || !comentario) return;
+
+    let avaliacoes = JSON.parse(localStorage.getItem("avaliacoes_cliente") || "[]");
+    const indiceEdicao = indiceEdicaoInput.value;
+
+    if (indiceEdicao === "") {
+      // Novo registro
+      avaliacoes.push({ imovel, comentario });
+    } else {
+      // Editando registro existente
+      avaliacoes[indiceEdicao] = { imovel, comentario };
+    }
+
+    localStorage.setItem("avaliacoes_cliente", JSON.stringify(avaliacoes));
+    cancelarEdicao();
+    renderAvaliacoes();
+  });
+
+  btnCancelar.addEventListener("click", cancelarEdicao);
+
+  window.addEventListener("DOMContentLoaded", renderAvaliacoes);
+</script>
